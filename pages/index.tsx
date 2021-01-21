@@ -25,7 +25,7 @@ function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
             {posts.map((slug) => (
               <li key={slug}>
                 <Link href={`post/${slug}`}>
-                  <a>{slug.replace("-", " ")}</a>
+                  <a>{slug.replace(/-/g, " ")}</a>
                 </Link>
               </li>
             ))}
